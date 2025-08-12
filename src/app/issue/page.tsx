@@ -15,14 +15,14 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea" 
-import { Calendar } from "@/components/ui/calendar" 
+// import { Calendar } from "@/components/ui/calendar" 
 
 
 // Form Validation Schema
 
 const formSchema = z.object({
   recipientName: z.string().min(2, {
-    message: "Recipient's name must be at least 2 characters.",
+    message: "Recipient&apos;s name must be at least 2 characters.",
   }),
   certificateTitle: z.string().min(2, {
     message: "Certificate title must be at least 2 characters.",
@@ -59,9 +59,9 @@ export default function IssueForm() {
           name="recipientName"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Recipient's Name</FormLabel>
+              <FormLabel>Recipient&apos;s Name</FormLabel>
               <FormControl>
-                <Input placeholder="Enter recipient's full name" {...field} />
+                <Input placeholder="Enter recipient&apos;s full name" {...field} />
               </FormControl>
               <FormDescription>
                 Name of the person to whom the certificate is issued.
